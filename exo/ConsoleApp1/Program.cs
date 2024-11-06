@@ -32,6 +32,12 @@ namespace ConsoleApp1
             Console.WriteLine("- " + ntpTime.ToString("D"));
             Console.WriteLine("- " + ntpTime.ToString("g"));
             Console.WriteLine("- " + ntpTime.ToString("d"));
+
+
+            TimeSpan timeDiff = DateTime.Now - ntpTime;
+            Console.WriteLine("Différence de temps : " + timeDiff.TotalSeconds + " secondes");
+
+
         }
         public static DateTime ToDateTime(ref byte[] ntpData)
         {
